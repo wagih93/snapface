@@ -15,22 +15,22 @@ snapStatus!:boolean;
 snapbtntxt!:string;
 
 ngOnInit(): void {
-    this.snapStatus=true;
+    this.snapStatus=false;
     this.snapbtntxt='Oh Snap!'
 
   }
   onAddSnap(){
     this.facesnap.snaps++;
-    this.snapStatus=false;
-    this.snapbtntxt='Oups unsnap'
+    this.snapStatus=true;
+    this.snapbtntxt='Oups Unsnap!'
     }
   onRemoveSnap(){
     this.facesnap.snaps--;
-    this.snapStatus=true;
+    this.snapStatus=false;
     this.snapbtntxt='Oh Snap!'
   }
   onAddSnapToggle(){
-    this.snapStatus ? this.onAddSnap() : this.onRemoveSnap()
+    this.snapStatus ?  this.onRemoveSnap():this.onAddSnap()
   }
 
 }
